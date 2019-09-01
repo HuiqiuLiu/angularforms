@@ -1,10 +1,39 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+﻿<form  role="form">
+    <div class="form-group">
+        <label for="fullName" >Name</label>
+        <input type="text" id="fullName" name="fullName" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes" class="form-control" rows="5" cols="1"></textarea>
+    </div>
 
-</body>
-</html>
+    <div class="form-group">
+        <label for="department">Department</label>
+        <select name="deparment" id="department" class="form-control" ng-model="employee.department" ng-options="dept for dept in departments">
+            <!--<option>Engineering</option>
+            <option>Marketing</option>
+            <option>Finance</option>
+            <option>Administration</option>-->
+        </select>
+    </div>
+    <br />
+    <span><b>Perks</b></span><br/>
+    <div class="custom-checkbox">
+        <label><input type="checkbox" value="perkCar" />Company Car</label>
+    </div>
+    <div class="custom-checkbox">
+        <label><input type="checkbox" value="perkStock"/>Stock Options</label>
+    </div>
+    <div class="custom-radio">
+        <label><input type="radio" name="payrollType" value="w2"/>W-2</label>
+    </div>
+    <div class="custom-radio">
+        <label><input type="radio" name="payrollType" value="ten99" />1099</label>
+    </div>
+    <div class="custom-radio">
+        <label><input type="radio" name="payrollType" value="none" />None</label>
+    </div>
+    <br />
+    <input type="submit" class="btn btn-primary offset-sm-6" value="Submit"/>
+    </form>
